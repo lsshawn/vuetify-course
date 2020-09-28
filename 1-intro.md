@@ -30,7 +30,7 @@ Let's have a fresh start. Delete HelloWorld component and everything in App.vue.
 
 This is the starting point of Vuetify magic. You only uses it once in your app.
 
-The `app` prop on components like v-navigation-drawer, v-app-bar, v-footer and more, help bootstrap your application with the proper sizing around <v-main> component
+The `app` prop on components like v-navigation-drawer, v-app-bar, v-footer and more, help bootstrap your application with the **proper sizing around <v-main> component**.
 
 v-main is a déclaration of where the pages content is so it should wrap everything except the thing that are always there in your app ie the toolbar and maybe the footer.
 
@@ -63,4 +63,32 @@ What if we want to override the default theme color? Add in `/plugins/vuetify.js
 
 If you want to conditionally switch dark/light theme, create a method to set `this.$vuetify.theme.dark` true/false.
 
-## 1.5
+## 1.5 Set-up vue-router and vuex
+
+Before we go ahead, let's configure our Vue app to include vue-router and vuex.
+
+`npm install --save vue-router vuex`
+
+## 1.6 v-main, v-container and v-footer
+
+In v-footer, let's add 2020 - Vuetify.
+
+<v-cols cols="12">
+
+This is the layout which we'll learn next.
+
+How do we center text? `class=text-center`. We'll learn about typography next.
+
+## 1.7 Layout
+
+Let's create a Layout component. Remember to register it in your router.js.
+
+Vuetify uses a 12 point grid system.
+
+There are 5 media breakpoints: xs, sm, md, lg and xl.
+
+`cols="12"` refers to xs.
+
+Use `offset-md=12` to offset left and right.
+
+Use `v-spacer` to fill available space between 2 components.
