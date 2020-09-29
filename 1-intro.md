@@ -92,3 +92,42 @@ There are 5 media breakpoints: xs, sm, md, lg and xl.
 Use `offset-md=12` to offset left and right.
 
 Use `v-spacer` to fill available space between 2 components.
+
+## 1.8 v-card
+
+V-card is versatile component that you can use to create panels, gallery and dialogs.
+
+v-card has 4 child components: v-card-title, v-card-subtitle, v-card-text and v-card-actions.
+
+v-card-actions is useful when you want to position a button at the bottom of the card. You don't need to adjust button margin or position to make it look pretty.
+
+`flat` is useful when you want to have a seamless looking card.
+
+## 1.9 flex
+
+Use `d-flex` to change a component into flex. Then use `justify-` to arrange the positions.
+
+In the code, you'll see a nested card. Here's an example of how versatile v-card is. We use it a lot e.g. in a popup box, we can use v-card instead of plain divs.
+
+## 1.9 typography
+
+- Create new router for /typography.
+- Create new component AppTypography.vue
+- list of all `text-` fonts
+- transform
+- decorations
+
+## 1.10 Color
+
+blue lighten-1
+
+blue--text text--darken-n3
+
+https://vuetifyjs.com/en/styles/colors/#material-colors
+
+## 1.11 Margin and padding
+
+In typography component, teach margin and padding.
+
+Number 1 to 12, each increasing by 4px.
+`my-n12` to set as negative margin.
