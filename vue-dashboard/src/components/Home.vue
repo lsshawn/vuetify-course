@@ -4,28 +4,25 @@
 
     <v-row>
       <!-- Widgets-->
-      <v-col cols="12" sm="6" lg="3">
-        <v-card class="teal lighten-2">
-          <div class="d-flex flex-no-wrap justify-space-between">
-            <v-icon size="70px" color="white">mdi-domain</v-icon>
-
-            <div>
-              <v-card-title class="headline white--text">
-                <div class="caption white--text mb-1">13% higher yesterday</div>
-                <div class="font-weight-bold">1,287,587</div></v-card-title
-              >
-
-              <v-card-subtitle class="white--text"
-                >Visits today</v-card-subtitle
-              >
-            </div>
-          </div>
-        </v-card>
+      <v-col cols="12" sm="6" lg="3" v-for="(stat, i) in stats" :key="i">
+        <app-widget :stat="stat"></app-widget>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+import AppWidget from "./analytics/AppWidget.vue";
+
+export default {
+  components: {
+    "app-widget": AppWidget,
+  },
+  computed: {
+    ...mapState({
+      stats: (state) => state.data.stats,
+    }),
+  },
+};
 </script>

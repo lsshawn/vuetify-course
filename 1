@@ -5,20 +5,23 @@
     <v-row>
       <!-- Widgets-->
       <v-col cols="12" sm="6" lg="3">
-        <v-card class="teal lighten-2">
-          <div class="d-flex flex-no-wrap justify-space-between">
-            <v-icon size="70px" color="white">mdi-domain</v-icon>
-
-            <v-card-title class="headline">1,287,587</v-card-title>
-
-            <v-card-subtitle>Visit today</v-card-subtitle>
-          </div>
-        </v-card>
+        <app-widget
+          v-for="(stat, i) in stats"
+          :key="i"
+          :stat="stat"
+        ></app-widget>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-export default {};
+import { mapState } from "vuex";
+export default {
+  computed: {
+    ...mapState({
+      stats: (state) => state.data.stats,
+    }),
+  },
+};
 </script>
