@@ -8,9 +8,9 @@ import AppTypography from "./components/AppTypography.vue";
 Vue.use(VueRouter);
 
 const routes = [
-  { path: "/", component: Home },
-  { path: "/layout", component: AppLayout },
-  { path: "/typography", component: AppTypography },
+  { path: "/", component: Home, name: "home" },
+  { path: "/layout", component: AppLayout, name: "layout" },
+  { path: "/typography", component: AppTypography, name: "typography" },
 ];
 
 export default new VueRouter({ mode: "history", routes });
