@@ -106,6 +106,12 @@ export default {
         to: { name: "transition" },
         exact: true,
       },
+      {
+        title: "Dialog",
+        icon: "mdi-help-box",
+        to: { name: "dialog" },
+        exact: true,
+      },
     ],
   }),
 };
