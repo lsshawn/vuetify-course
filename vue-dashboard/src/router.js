@@ -7,6 +7,7 @@ import AppTypography from "./components/AppTypography.vue";
 import AppForm from "./components/AppForm.vue";
 import UserProfile from "./components/UserProfile.vue";
 import AppPhotoUpload from "./components/AppPhotoUpload.vue";
+import AppTransition from "./components/AppTransition.vue";
 
 Vue.use(VueRouter);
 
@@ -17,6 +18,7 @@ const routes = [
   { path: "/form", component: AppForm, name: "form" },
   { path: "/user-profile", component: UserProfile, name: "userProfile" },
   { path: "/photo-upload", component: AppPhotoUpload, name: "photoUpload" },
+  { path: "/transition", component: AppTransition, name: "transition" },
 ];
 
 export default new VueRouter({ mode: "history", routes });

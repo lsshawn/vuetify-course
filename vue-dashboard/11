@@ -1,5 +1,11 @@
 <template>
   <div>
+    <v-select
+      v-model="selectedTransition"
+      :items="transitions"
+      label="Transition"
+    ></v-select>
+
     <v-menu transition="fade-transition">
       <template v-slot:activator="{ on, attrs }">
         <v-btn color="primary" class="ma-2" v-bind="attrs" v-on="on">
@@ -19,6 +25,7 @@
 export default {
   data() {
     return {
+      selectedTransition: "",
       transitions: [
         "fab-transition",
         "fade-transition",

@@ -100,6 +100,12 @@ export default {
         to: { name: "photoUpload" },
         exact: true,
       },
+      {
+        title: "Transition",
+        icon: "mdi-help-box",
+        to: { name: "transition" },
+        exact: true,
+      },
     ],
   }),
 };
