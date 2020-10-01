@@ -29,7 +29,7 @@
     ></v-text-field>
 
     <div class="text-h2 mb-10">Form</div>
-    <v-form ref="form" v-model="valid" lazy-validation>
+    <v-form ref="form" v-model="valid">
       <v-text-field
         v-model="name"
         :counter="10"
@@ -67,6 +67,16 @@
       <v-btn color="error" class="mr-4" @click="reset">
         Reset Form
       </v-btn>
+
+      <div class="text-h3 my-10">Sizing the text field</div>
+      <v-row>
+        <v-col cols="6">
+          <v-text-field label="Your name"></v-text-field>
+        </v-col>
+        <v-col cols="6">
+          <v-text-field label="Age"></v-text-field>
+        </v-col>
+      </v-row>
     </v-form>
   </div>
 </template>

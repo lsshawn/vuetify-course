@@ -82,6 +82,18 @@ export default {
         to: { name: "layout" },
         exact: true,
       },
+      {
+        title: "Form",
+        icon: "mdi-help-box",
+        to: { name: "form" },
+        exact: true,
+      },
+      {
+        title: "User profile",
+        icon: "mdi-help-box",
+        to: { name: "userProfile" },
+        exact: true,
+      },
     ],
   }),
 };
