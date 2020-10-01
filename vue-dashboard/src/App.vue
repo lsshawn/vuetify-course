@@ -112,6 +112,12 @@ export default {
         to: { name: "dialog" },
         exact: true,
       },
+      {
+        title: "Data table",
+        icon: "mdi-help-box",
+        to: { name: "datatable" },
+        exact: true,
+      },
     ],
   }),
 };
