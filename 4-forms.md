@@ -18,3 +18,31 @@
 - alternative way to change on input instead of button click.
 
 - `isPilot` user property to learn try v-checkbox
+
+## 4.2 v-select vs v-autocomplete
+
+v-select only allows selection. Use `v-autocomplete` if you want to allow user to input and filter selection
+
+v-select only allows selection. Use `v-autocomplete` if you want to allow user to input and filter selection.
+
+## 4.3 Exercise on v-autocomplete timezone
+
+geo.json: https://tinyurl.com/ycgsenfs
+
+Put that json into /src/assets
+
+## 4.4 Snackbar: show confirmation on user update
+
+## 4.5 Button with loading and disabled
+
+## 4.6 Date picker with text entry
+
+## 4.7 V-chips and combining it with v-autocomplete
+
+In forms.
+
+## 4.8 Text area with autogrow
+
+## 4.9 File input
+
+AppPhotoUpload to show functionality with Cloudinary

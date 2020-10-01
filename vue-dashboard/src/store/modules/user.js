@@ -11,6 +11,8 @@ const state = {
     postcode: "",
     about: "",
     isPilot: "",
+    timezone: "",
+    joinDate: "",
   },
 };
 

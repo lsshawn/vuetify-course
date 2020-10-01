@@ -45,13 +45,35 @@
         required
       ></v-text-field>
 
+      <div class="text-h5 my-5">Select & autocomplete</div>
+
       <v-select
         v-model="select"
         :items="['beginner', 'intermediate', 'advanced']"
         :rules="[(v) => !!v || 'Skill is required']"
-        label="Skill level"
+        label="Skill level (v-select)"
         required
       ></v-select>
+
+      <v-autocomplete
+        v-model="select"
+        :items="['beginner', 'intermediate', 'advanced']"
+        label="Skill level (v-autocomplete)"
+      ></v-autocomplete>
+
+      <v-autocomplete
+        v-model="select"
+        :items="[
+          { rank: 'beginner', title: 'beg' },
+          { rank: 'intermediate', title: 'int' },
+          { rank: 'advanced', title: 'adv' },
+        ]"
+        label="Skill level (v-autocomplete on array of objects)"
+        item-value="rank"
+        :item-text="(item) => '1.' + item.title"
+      ></v-autocomplete>
+
+      Select: {{ select }}
 
       <v-checkbox
         v-model="checkbox"
@@ -78,6 +100,24 @@
         </v-col>
       </v-row>
     </v-form>
+
+    <div class="text-h2 my-10">Chips</div>
+
+    <v-chip color="primary" label>
+      <v-icon left>
+        mdi-account-circle-outline
+      </v-icon>
+      John Woo
+    </v-chip>
+
+    <v-autocomplete
+      v-model="languages"
+      :items="['English', 'Spanish', 'Chinese']"
+      chips
+      small-chips
+      label="Language"
+      multiple
+    ></v-autocomplete>
   </div>
 </template>
 
@@ -105,6 +145,7 @@ export default {
         (v) => !!v || "E-mail is required",
         (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
       ],
+      languages: [],
     };
   },
   methods: {

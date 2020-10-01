@@ -94,6 +94,12 @@ export default {
         to: { name: "userProfile" },
         exact: true,
       },
+      {
+        title: "Photo upload",
+        icon: "mdi-help-box",
+        to: { name: "photoUpload" },
+        exact: true,
+      },
     ],
   }),
 };
