@@ -10,6 +10,8 @@ import AppPhotoUpload from "./components/AppPhotoUpload.vue";
 import AppTransition from "./components/AppTransition.vue";
 import AppDialog from "./components/AppDialog.vue";
 import AppDatatable from "./components/AppDatatable.vue";
+import AppOthers from "./components/AppOthers.vue";
+import AppGraph from "./components/AppGraph.vue";
 
 Vue.use(VueRouter);
 
@@ -23,6 +25,8 @@ const routes = [
   { path: "/transition", component: AppTransition, name: "transition" },
   { path: "/dialog", component: AppDialog, name: "dialog" },
   { path: "/datatable", component: AppDatatable, name: "datatable" },
+  { path: "/others", component: AppOthers, name: "others" },
+  { path: "/graph", component: AppGraph, name: "graph" },
 ];
 
 export default new VueRouter({ mode: "history", routes });

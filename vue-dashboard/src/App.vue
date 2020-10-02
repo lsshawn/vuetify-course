@@ -118,6 +118,18 @@ export default {
         to: { name: "datatable" },
         exact: true,
       },
+      {
+        title: "Others",
+        icon: "mdi-help-box",
+        to: { name: "others" },
+        exact: true,
+      },
+      {
+        title: "Graph",
+        icon: "mdi-help-box",
+        to: { name: "graph" },
+        exact: true,
+      },
     ],
   }),
 };
